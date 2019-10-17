@@ -1,0 +1,25 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width" />
+      <title>{% block title %}{% endblock %}</title>
+      <link rel="stylesheet" href="{% static "FancyApp/css/skeleton.css"%}" type="text/css" media="screen" title="no title" charset="utf-8">
+
+     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+   </head>
+   <body>
+      <div class = "container">
+         <div class = "row">
+            <h1>My site!</h1>
+         </div>
+         <div class = "row">
+            {% block content %}{% endblock %}
+         </div>
+      </div>
+      <script src="{% static "FancyApp/js/helloworld.js" %}" charset="utf-8"></script>
+   </body>
+</html>
+
